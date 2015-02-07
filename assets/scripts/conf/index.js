@@ -1,12 +1,14 @@
 define([
-    'text!conf/site-settings.json'
-], function(site_settings) {
+    'text!conf/site-settings.json',
+    'text!conf/app-settings.json'
+], function(site_settings, app_settings) {
 
     'use strict';
 
     // Map of configs
     var data = {
-        site_settings: site_settings
+        site_settings: site_settings,
+        app_settings: app_settings
     };
 
     // Build actual config
