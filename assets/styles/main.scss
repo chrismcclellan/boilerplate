@@ -1,0 +1,39 @@
+//
+// Main
+// --------------------------------------------------
+
+  // DEPENDENCIES
+  // ==================================== */
+    // compass
+    @import "compass/css3";
+
+    // settings
+    @import "settings/main";
+
+    // vendor
+    @import "vendor/main";
+
+    // foundation
+    @import "foundation-5.3.0/normalize";
+    @import "foundation-5.3.0/foundation";
+
+    // fonts
+    @import "font-awesome/font-awesome";
+    @import "line-icons/line-icons";
+
+
+  // LIBS
+  // ==================================== */
+    @import "lib/animate";
+
+
+  // APP
+  // ==================================== */
+
+    @import "base";
+    @import "alerts";
+    @import "loading";
+    @import "header/main";
+    @import "footer/main";
+    @import "auth";
+    @import "pages/main";

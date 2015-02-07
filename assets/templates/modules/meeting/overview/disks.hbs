@@ -1,0 +1,17 @@
+<div class="large-12 columns">
+  
+  <h5>Disk Usage</h5>
+
+  <div class="row">
+
+    {{#each items}}
+      <div class="large-2 medium-6 columns end">
+        <p class="percentage data-point">{{percentage}}<span class="rate">%</span></p>
+        <p class="device">{{device}}</p>
+        <p class="details">({{used}} of {{total}})</p>
+      </div>
+    {{/each}}
+
+  </div><!--  /.row -->
+  
+</div><!-- /.large-12 .columns -->

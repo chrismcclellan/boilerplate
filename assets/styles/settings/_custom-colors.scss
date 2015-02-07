@@ -1,0 +1,35 @@
+
+
+// Grays
+$black:                  #000;
+$gray-darkest:           #363636;
+$gray-darker:            #636363;
+$gray-dark:              #7d7d7d;
+$gray:                   #959595;
+$gray-light:             #b7b7b7;
+$gray-lighter:           #d7d7d7;
+$gray-lightest:          #ebebeb;
+$white:                  #fff;
+
+// Colors
+$color-red:            #ed4e41;
+$color-orange:         #ee8341;
+$color-yellow:         #ede656;
+$color-green:          #62a848;
+$color-blue:           #5696bd;
+$color-purple:         #9859b2;
+$color-pink:           #e489a1;
+$color-white:          $white;
+$color-lightest-gray:  $gray-lightest;
+$color-lighter-gray:   $gray-lighter;
+$color-light-gray:     $gray-light;
+$color-gray:           $gray;
+$color-dark-gray:      $gray-dark;
+$color-darker-gray:    $gray-darker;
+$color-darkest-gray:   $gray-darkest;
+$color-black:          $black;
+
+$top-bar-border: $white;
+$body-bg-color:  tint($gray-lightest, 50%);
+
+

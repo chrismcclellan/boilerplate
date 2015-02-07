@@ -1,0 +1,22 @@
+
+/* ALERTS
+ * System alerts (ie: dropped connection, permissions, etc)
+ * =========================================================== */
+ 
+#alerts {
+  position: relative;
+  top: $topbar-height;
+
+  .alert-box {
+    margin: $base-space / 2;
+
+    @include alert(
+
+      // Adjust the background of the alert
+      $bg: $alert-color,
+
+      // Give a border to the alert box
+      $radius: true
+    );
+  }
+}

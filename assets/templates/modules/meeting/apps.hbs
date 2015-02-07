@@ -1,0 +1,25 @@
+<div class="large-12 columns option-group">
+
+  {{#if locals.has_apps}}
+    <a href="/apps/new/s/{{id}}" class="button radius right navigate"><i class="icon icon-plus"></i> New App</a>
+
+    <h4>Apps</h4>
+    <hr>
+
+    <div class="apps-list">
+      <ul class="no-bullet"></ul>
+    </div>
+  {{else}}
+
+    {{#unless creation_action_error}}
+    <div class="large-12 columns text-center no-apps">
+      <h4>Great, you're ready to create your first app on this server.</h4>
+
+      <a href="/apps/new/s/{{id}}" class="button radius text-center navigate"><i class="icon icon-plus"></i> New App</a>
+    </div>
+    {{/unless}}
+
+  {{/if}}
+
+</div>
+

@@ -1,0 +1,75 @@
+
+
+// PT Sans
+// Open Sans
+// Open Sans Condensed
+// Droid Sans Mono
+
+
+@import url(//fonts.googleapis.com/css?family=PT+Serif:400,700|Open+Sans:100,300,400,600,700|Open+Sans+Condensed:300,700|Droid+Sans+Mono);
+
+// Fonts
+$pt_serif:        "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$open_sans:       "Open Sans", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$open_sans_cond:  "Open Sans Condensed", "Helvetica Neue", "Helvetica", Helvetica, Arial, sans-serif;
+$source_code_pro: "Source Code Pro", monospace;
+$droid_sans_mono: "Droid Sans Mono", monospace;
+$museo_sans:      "MuseoSans", Helvetica, Arial, sans-serif;
+
+// Aliases
+// $font_monospace: $source_code_pro;
+$font_monospace: $droid_sans_mono;
+
+$sans-font-family:      $open_sans;
+$cond-font-family:      $open_sans_cond;
+$serif-font-family:     $pt_serif;
+$nav-font-family:       $open_sans;
+$header-font-family:    $museo_sans;
+$monospace-font-family: $droid_sans_mono;
+
+
+// Museo Sans
+// -------------------------
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../fonts/museosans/museosans-100-webfont.eot?") format("embedded-opentype"),
+       url("../fonts/museosans/museosans-100-webfont.woff") format("woff"),
+       url("../fonts/museosans/museosans-100-webfont.svg") format("svg"),
+       url("../fonts/museosans/museosans-100-webfont.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 100;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../fonts/museosans/museosans-300-webfont.eot?") format("embedded-opentype"),
+       url("../fonts/museosans/museosans-300-webfont.woff") format("woff"),
+       url("../fonts/museosans/museosans-300-webfont.svg") format("svg"),
+       url("../fonts/museosans/museosans-300-webfont.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 300;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../fonts/museosans/museosans-500-webfont.eot?") format("embedded-opentype"),
+       url("../fonts/museosans/museosans-500-webfont.woff") format("woff"),
+       url("../fonts/museosans/museosans-500-webfont.svg") format("svg"),
+       url("../fonts/museosans/museosans-500-webfont.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 500;
+  font-stretch: normal;
+}
+
+@font-face {
+  font-family: "MuseoSans";
+  src: url("../fonts/museosans/museosans-700-webfont.eot?") format("embedded-opentype"),
+       url("../fonts/museosans/museosans-700-webfont.woff") format("woff"),
+       url("../fonts/museosans/museosans-700-webfont.svg") format("svg"),
+       url("../fonts/museosans/museosans-700-webfont.ttf") format("opentype");
+  font-style: normal;
+  font-weight: 700;
+  font-stretch: normal;
+}

@@ -1,0 +1,84 @@
+body.page-new-meeting {
+
+  #allday {
+    margin-top: 30px;
+  }
+
+  .time-selection-list {
+    list-style-type: none;
+    margin: 12px 0 0;
+    counter-reset: my-counter;
+
+    .ui-sortable-helper {
+      @include box-shadow(0 3px 3px rgba($gray-lighter, .75));
+    }
+
+    .ui-sortable-placeholder {
+      border: 2px dashed $gray-lightest;
+      visibility: visible !important;
+      @include box-shadow(0 0 0 transparent);
+    }
+
+    li {
+      position: relative;
+      display: block;
+      line-height: 40px;
+      min-height: 40px;
+      overflow: hidden;
+      padding-left: 52px;
+      margin-bottom: 12px;
+      background: $white;
+      border: 1px solid $gray-lighter;
+      @include box-shadow(0 1px 1px rgba($gray-lighter, .5));
+      @include border-radius(3px);
+
+      &:not(.ui-sortable-placeholder):before {
+        position: absolute;
+        top: 0;
+        left: 0;
+        display: block;
+        content: counter(my-counter);
+        counter-increment: my-counter;
+        width: 40px;
+        height: 40px;
+        text-align: center;
+        line-height: 40px;
+        background: $black;
+        color: $white;
+      }
+
+      .handle {
+        position: absolute;
+        top: 4px;
+        right: 0;
+        height: 100%;
+        width: 24px;
+        color: $gray-light;
+
+        &:hover {
+          color: $gray-dark;
+          cursor: move;
+        }
+
+        span {
+          display: block;
+          width: 100%;
+          line-height: 8px;
+          vertical-align: middle;
+          text-align: center;
+
+          &:before {
+            content: ".";
+          }
+        }
+      }
+
+      p {
+        line-height: inherit;
+        margin: 0;
+        padding: 0;
+        color: $gray-dark;
+      }
+    }
+  }
+}

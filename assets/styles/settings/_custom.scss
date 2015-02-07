@@ -1,0 +1,26 @@
+//
+// Settings
+// --------------------------------------------------
+
+$base-space: 24px;
+$baseSpace:  $base-space;
+
+// Screens
+// -------------------------
+$screen-small: (40em);        // 640px
+$screen-medium: (64em);       // 1024px
+$screen-large: (90em);        // 1440px
+$screen-xlarge: (120em);      // 1920px
+$screen-sxlarge: (120.063em); // 1921px
+
+$x-large-screen: 1400px;
+
+$header-width: 260px;
+$header-expanded-width: $header-width;
+$header-animation-speed: 300ms;
+
+// Responsive
+// $small-up: "only screen and (max-width:"#{$small-screen}")";
+// $medium-up: "only screen and (max-width:"#{$medium-screen}")";
+// $large-up: "only screen and (max-width:"#{$large-screen}")";
+// $xlarge-up: "only screen and (max-width:"#{$xlarge-screen}")";

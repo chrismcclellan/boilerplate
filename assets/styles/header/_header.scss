@@ -1,0 +1,35 @@
+
+
+#header {
+  @include clearfix;
+
+  #header-inner-wrapper {
+    @include clearfix;
+  }
+
+  button {
+    background: $white;
+    color: $primary-color;
+    font-size: 1rem;
+    line-height: 62px;
+    margin-top: .2rem;
+    margin-bottom: .5rem;
+    padding: 0 24px;
+    vertical-align: baseline;
+
+    &:after {
+      display: none;
+    }
+
+    &:focus {
+      border: 0 none;
+      outline: 0 none;
+    }
+  }
+
+  .f-dropdown {
+    margin-left: 16px;
+    margin-top: -12px;
+  }
+
+} // #header

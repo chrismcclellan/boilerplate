@@ -1,0 +1,111 @@
+
+<div class="large-12 columns option-group">
+
+  <div class="row">
+    <div class="small-12 columns">
+      <a href="#" class="button upgrade-billing radius right">Update Credit Card</a>
+    </div>
+  </div>
+
+  <div class="row" data-equalizer>
+
+    {{#each locals.config.plans}}
+
+      <div class="large-4 columns {{#if_eq @index compare=../plan}}current-plan{{/if_eq}}" data-equalizer-watch>
+
+        <ul class="pricing-table">
+
+          <li class="title">{{this.name}}</li>
+          <li class="price">{{this.price}}</li>
+          <li class="description">{{this.description}}</li>
+          
+          {{#each this.features}}
+            <li class="bullet-item">
+              {{#unless @index}}<strong>{{/unless}}
+                {{this}}
+              {{#unless @index}}</strong>{{/unless}}
+            </li>
+          {{/each}}
+
+          {{#if ../locals.paid}}
+
+            {{#unless_eq @index compare=../../plan}}
+              <li class="cta-button">
+                <a class="button upgrade radius"
+                  href="#"
+                  data-category="Change Plan Button"
+                  data-action="Click"
+                  data-label="Pricing Table: {{this.name}}"
+                  data-plan="{{@index}}">
+                    Select Plan
+                </a>
+              </li>
+            {{/unless_eq}}
+            {{#if_eq @index compare=../../plan}}
+              <li class="cta-button">
+                <b>Current Plan</b>
+              </li>
+            {{/if_eq}}
+
+          {{else}}
+
+            {{! As the user hasn't entered a credit card, don't show buttons
+                to switch plans. Instead, show the Business plan as active
+                if the user is on trial or the Free plan as active if the
+                trial has expired. }}
+
+            {{#if ../../locals.trialexpired}}
+
+              {{#if_eq @index compare=0}}
+                <li class="cta-button">
+                  <b>Current Plan</b>
+                </li>
+              {{else}}
+                <li class="cta-button">
+                  Credit Card Required
+                </li>
+              {{/if_eq}}
+
+            {{else}}
+
+              {{#if_eq @index compare=2}}
+                <li class="cta-button">
+                  <b>Trial Plan</b>
+                </li>
+              {{/if_eq}}
+
+            {{/if}}
+
+          {{/if}}
+
+        </ul>
+
+      </div><!-- /.large-4.columns -->
+    {{/each}}
+
+  </div>
+
+  {{#unless locals.trialexpired}}
+  <div class="row">
+    <div class="small-12 columns">
+      <div data-alert class="alert-box success radius">
+        Your Business plan trial ends on {{locals.trialendstring}}.
+          After that, you'll be on the Free plan if you haven't
+          added a credit card.
+      </div>
+    </div>
+  </div>
+  {{/unless}}
+
+  {{#each locals.messages}}
+    <div class="row">
+      <div class="small-12 columns">
+        <div data-alert class="alert-box {{this.kind}} radius">
+          {{this.message}}
+          <a href="#" class="close">&times;</a>
+        </div>
+      </div>
+    </div>
+  {{/each}}
+
+</div>

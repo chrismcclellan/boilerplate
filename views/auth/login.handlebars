@@ -1,0 +1,39 @@
+
+<div class="row">
+
+  <div class="large-8 columns large-centered">
+    {{#if errors}}
+      {{#each errors }}
+        {{error}}
+      {{/each}}
+    {{/if}}
+  </div>
+
+</div>
+
+<div class="row">
+
+  <div class="large-8 columns large-centered">
+
+    <h1>Login</h1>
+
+    <form role="form" action="/auth/local" method="post">
+      <input type="text" name="identifier" placeholder="Username or Email">
+      <input type="password" name="password" placeholder="Password">
+      <button type="submit">Sign in</button>
+    </form>
+
+    <hr />
+
+    {{#if providers }}
+      <h4>You can also use one of these...</h4>
+
+      {{#each providers}}
+        <a href="/auth/{{@key}}" role="button" class="button small">{{name}}</a>
+      {{/each}}
+
+    {{/if}}
+
+  </div>
+
+</div>

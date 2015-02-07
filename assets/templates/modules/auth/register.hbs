@@ -1,0 +1,53 @@
+<div class="heading">
+  <h2>Sign Up</h2>
+</div>
+
+{{#if locals.error}}
+  <div class="row">
+    <div class="small-12 columns">
+      <div data-alert class="alert-box warning radius">
+        {{locals.error}}
+        <a href="#" class="close">&times;</a>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+<form>
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <input type="email" name="email" id="email" placeholder="Email" value="{{email}}">
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <input type="password" name="password" id="password" placeholder="Password" value="{{password}}">
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <p class="agreetos">By signing up, you agree to the
+          <a href="https://serverpilot.io/tos.html" target="_new">Terms of Service</a>.</p>
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="row">
+
+    <div class="large-12 columns button-wrapper">
+      <input type="hidden" name="plan" value="0">
+      <button class="button radius">Sign Up</button>
+      <a href="/login" class="navigate">or Log In</a>
+    </div>
+
+  </div><!-- /.row -->
+
+</form>

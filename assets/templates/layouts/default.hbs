@@ -1,0 +1,51 @@
+<div class="off-canvas-wrap" data-offcanvas>
+  
+  <div class="inner-wrap">
+    
+    {{!-- MOBILE TOP BAR --}}
+    <nav class="tab-bar hide-for-large-up">
+      <section class="middle tab-bar-section">
+        <a href="/" class="navigate logo">
+          {{!-- <img src="/images/svg/logo.svg" alt="{{config.site_settings.site_name}}" width="2001" height="417" /> --}}
+        </a>
+      </section>
+
+      <section class="right-small">
+        <a class="right-off-canvas-toggle menu-icon" href="#"><span></span></a>
+      </section>
+    </nav>
+    
+    {{!-- MAIN CONTENT AREA --}}
+    <div class="main-section">
+      
+      <div class="row">
+
+        <div id="header" class="large-2 columns show-for-large-up"></div>
+        
+        <div class="large-10 columns">
+          <div id="page" class="container row">
+            <div id="content" class="large-12 medium-12 columns"></div>
+          </div>
+        </div>
+
+      </div><!-- /.row -->
+    </div><!-- /.main-section -->
+    
+
+    {{!-- LOADING AREA --}}
+    <div id="loading" class="container"></div>
+    
+    {{!-- MOBILE RIGHT NAV --}}
+    <aside class="right-off-canvas-menu">
+      <ul class="off-canvas-list">
+        {{#each config.app_settings.navigation}}
+          <li class="{{this.id}}">
+            <a class="navigate" href="{{this.path}}">{{this.name}}</a>
+          </li>
+        {{/each}}
+      </ul>
+    </aside>
+
+  </div>
+
+</div>

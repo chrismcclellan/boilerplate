@@ -1,0 +1,30 @@
+{{#if locals.restricted}}
+  <div class="large-12 columns option-group">
+    <h4>Coach Plan Feature</h4>
+    <p>Please <a href="/account" class="navigate">upgrade</a> to create additional system users.</p>
+  </div>
+{{else}}
+
+    <h5>Add System User <small>
+    <p>A System User is an account on a server and can be accessed via SSH or SFTP.</p>
+    
+    <form>
+      <div class="row">
+        <div class="large-2 columns">
+          <label for="name" class="right inline">Username</label>
+        </div>
+        <div class="large-10 columns">
+          <input type="text" id="name" name="name" placeholder="" autocorrect="off" autocapitalize="off" spellcheck="false" />
+        </div>
+      </div>
+      <div class="row">
+        <div class="large-10 large-offset-2 columns">
+          <input type="hidden" name="servername" value="{{locals.server.name}}" disabled>
+          <input type="hidden" name="serverid" value="{{locals.server.id}}" disabled>
+          <button class="button radius" disabled>Create</button>
+        </div>
+      </div>
+    </form>
+    <hr>
+
+{{/if}}

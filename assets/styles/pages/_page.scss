@@ -1,0 +1,33 @@
+
+/* PAGE
+ * =========================================================== */
+
+#page {
+  background: $white;
+
+  .page.page-content {
+    position: relative;
+    display: block;
+    width: 100%;
+    background-color: $white;
+    padding: 0;
+    @extend .clearfix;
+    
+    #page-content {
+      position: relative;
+      display: block;
+      width: 100%;
+      padding-bottom: $baseSpace * 2;
+      @extend .clearfix;
+    }
+
+    .option {
+
+      &:first-child {
+        margin-top: 24px;
+      }
+    }
+
+  } // .page.page-content
+
+} // #page

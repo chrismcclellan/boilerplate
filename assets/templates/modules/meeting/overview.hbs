@@ -1,0 +1,23 @@
+{{#if locals.restricted}}
+  <div class="large-12 columns option-group">
+    <h4>Coach Plan Feature</h4>
+    <p>Please <a href="/account" class="navigate">upgrade</a> to view server stats.</p>
+  </div>
+{{else}}
+
+<div class="large-12 columns options-group">
+  <ul class="button-group round right timespan-filter">
+    <li><a href="#" class="small button" data-span="hour">Hour</a></li>
+    <li><a href="#" class="small button active" data-span="day">Day</a></li>
+    <li><a href="#" class="small button" data-span="week">Week</a></li>
+  </ul>
+</div>
+
+{{#if is_connected}}
+  <div class="large-12 columns stats-row" id="disks"></div>
+  <div class="large-12 columns stats-row" id="memory"></div>
+  <div class="large-12 columns stats-row" id="cpu"></div>
+  <div class="large-12 columns stats-row" id="bandwidth"></div>
+{{/if}}
+
+{{/if}}

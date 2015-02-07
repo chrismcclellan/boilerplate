@@ -1,0 +1,37 @@
+
+
+  {{!-- SEVER FILTERING --}}
+  <div class="server-filter large-4 end">
+    <i class="icon icon-search"></i>
+    <input type="text" value="" placeholder="Search Servers" autocorrect="off" autocapitalize="off" spellcheck="false" />
+  </div>
+
+{{!-- STATS HEADINGS --}}
+<div class="server-sort large-12 show-for-large-up">
+
+    <div class="large-4 columns server-name">
+      <p><a href="#" data-sort="name">Server</a></p>
+    </div>
+
+    <div class="large-2 columns server-lastaddress">
+      <p><a href="#" data-sort="lastaddress">IP Address</a></p>
+    </div>
+    
+    {{#unless locals.restricted}}
+    <div class="large-2 columns server-memory">
+      <p><a href="#" data-sort="memory">Memory</a></p>
+    </div>
+
+    <div class="large-2 columns server-cpu">
+      <p><a href="#" data-sort="cpu">CPU</a></p>
+    </div>
+
+    <div class="large-2 columns server-disk">
+      <p><a href="#" data-sort="disk">Fullest Disk</a></p>
+    </div>
+    {{/unless}}
+
+</div><!-- /.table-sort .large-12 -->
+
+{{!-- STATS LIST --}}
+<div class="server-list large-12 full-width"></div>

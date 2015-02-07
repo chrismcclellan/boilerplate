@@ -1,0 +1,47 @@
+
+{{!-- API KEY CHECK --}}
+
+{{#unless apikey}}
+
+  <div class="large-12 columns option">
+
+    <h4>It looks like you never ran the installer for this server.</h4>
+    <p>You should probably just delete this server and <a href="/servers/new" class="navigate">connect a new server.</a></p>
+    <p><a href="#" class="delete-server button radius small alert">Delete</a></p>
+
+  </div>
+
+{{else}}
+
+  <div class="large-12 columns option server-connect-instructions">
+
+    <h4>Remember, this must be a new server running 64-bit Ubuntu 12.04 or 14.04.</h4>
+    <p>ServerPilot will install Nginx, Apache, PHP, and MySQL.<br>You can just sit back and relax.</p>
+    
+    <div class="panel callout radius">
+
+      <p>To connect this server, you need to run the ServerPilot installer. Log in to your server and run the following:</p>
+      
+      <textarea rows="5" readonly>
+(test -e /usr/bin/wget || (sudo apt-get update &amp;&amp; sudo apt-get -y install wget)) &amp;&amp; \
+sudo wget -nv -O serverpilot-installer.py https://download.serverpilot.io/serverpilot-installer.py &amp;&amp; \
+sudo python serverpilot-installer.py \
+    --server-id={{id}} \
+    --server-apikey={{apikey}}
+      </textarea>
+
+      <p>Once the installer has finished, you'll be able to manage this server through ServerPilot. So, you've got that going for you, which is nice.</p>
+      
+    </div>
+
+  </div>
+
+  <!-- SERVER CONNECTION ANIMATION -->
+  <div class="server-connect-progress" style="display: none">
+    <div class="progress large-4 centered alert round">
+      <span class="meter" style="width: 0%"></span>
+      <p class="message"></p>
+    </div>
+  </div>
+
+{{/unless}}

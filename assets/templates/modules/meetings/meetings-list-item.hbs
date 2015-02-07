@@ -1,0 +1,35 @@
+
+<div class="large-4 small-12 columns server-name" data-sort-attr="name">
+  <p>
+    <a href="/servers/{{id}}" class="navigate">{{name}}</a>
+    <span class="{{#unless locals.server.is_connected}}not-connected{{/unless}}"></span>
+  </p>
+</div>
+
+<div class="large-2 small-4 columns server-lastaddress" data-sort-attr="lastaddress" data-column-label="IP Address">
+  <p>{{lastaddress}}</p>
+</div>
+
+{{#unless locals.restricted}}
+
+  <div class="large-2 small-3 columns server-memory" data-sort-attr="memory"  data-column-label="Memory">
+    <p class="{{#if memory.health}}health-{{memory.health}}{{/if}}">
+      {{#if memory.percent}}{{memory.percent}}{{else}}0{{/if}}<span class="percent">%</span>
+    </p>
+    <p class="small">&nbsp;{{#if_and memory.used memory.total}}{{memory.used}} / {{memory.total}}{{/if_and}}</p>
+  </div>
+
+  <div class="large-2 small-2 columns server-cpu" data-sort-attr="cpu" data-column-label="CPU">
+    <p class="{{#if cpu.health}}health-{{cpu.health}}{{/if}}">
+      {{#if cpu.percent}}{{cpu.percent}}{{else}}0{{/if}}<span class="percent">%</span>
+    </p>
+  </div>
+
+  <div class="large-2 small-3 columns server-disk last end" data-sort-attr="disk" data-column-label="Disk">
+    <p class="{{#if disk.0.health}}health-{{disk.0.health}}{{/if}}">
+      {{#if disk.0.percent}}{{disk.0.percent}}{{else}}0{{/if}}<span class="percent">%</span>
+    </p>
+    <p class="small">&nbsp;{{#if_and disk.0.used disk.0.total}}{{disk.0.used}} / {{disk.0.total}}{{/if_and}}</p>
+  </div>
+  
+{{/unless}}

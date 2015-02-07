@@ -1,0 +1,43 @@
+<div class="heading">
+  <h2>Login</h2>
+</div>
+
+{{#if locals.error}}
+  <div class="row">
+    <div class="small-12 columns">
+      <div data-alert class="alert-box warning radius">
+        {{locals.error}}
+        <a href="#" class="close">&times;</a>
+      </div>
+    </div>
+  </div>
+{{/if}}
+
+<form>
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <input type="email" name="email" id="email" placeholder="Email" value="{{email}}">
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="row">
+
+    <div class="large-12 columns">
+      <input type="password" name="password" id="password" placeholder="Password">
+    </div>
+
+  </div><!-- /.row -->
+
+  <div class="row">
+
+    <div class="large-12 columns button-wrapper">
+      <button class="button radius">Log In</button>
+      <a href="/signup" class="navigate">or Sign Up</a>
+    </div>
+
+  </div><!-- /.row -->
+
+</form>

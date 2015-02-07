@@ -1,0 +1,11 @@
+<div class="large-12 columns">
+  {{#if data}}
+    <div class="panel">
+      <ul class="no-bullet">
+        {{#each data}}
+          <li {{#if this.is404}}class="is-404"{{/if}}>{{this.message}}</li>
+        {{/each}}
+      </ul>
+    </div>
+  {{/if}}
+</div>

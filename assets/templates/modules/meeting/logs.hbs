@@ -1,0 +1,32 @@
+{{#if locals.restricted}}
+  <div class="large-12 columns option-group">
+    <h4>Business Plan Feature</h4>
+    <p>Please <a href="/account" class="navigate">upgrade</a> to view logs.</p>
+  </div>
+{{else}}
+
+<div class="large-12 columns option-group">
+
+    <h4>Logs</h4>
+    <hr>
+
+    <div class="row">
+
+      <div class="large-12 columns">
+        
+        <select name="log-files">
+          <option value="">Select a log file...</option>
+          {{#each locals.logfiles}}
+            <option value="{{this.filename}}">{{this.filename}}</option>
+          {{/each}}
+        </select>
+
+      </div>
+
+      <div class="large-12 columns log-file"></div>
+
+    </div>
+
+</div>
+
+{{/if}}

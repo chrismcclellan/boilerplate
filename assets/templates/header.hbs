@@ -1,0 +1,20 @@
+
+<div class="sticky">
+
+  <h1>
+    <a href="/" class="navigate">
+      {{!-- <img src="/images/svg/logo-dark.svg" alt="{{config.site_settings.site_name}}" width="2001" height="417" /> --}}
+    </a>
+  </h1>
+
+  <ul class="side-nav text-right">
+
+    {{#each config.app_settings.navigation}}
+      <li class="{{this.id}}">
+        <a class="navigate" href="{{this.path}}">{{this.name}}</a>
+      </li>
+    {{/each}}
+
+  </ul>
+
+</div>

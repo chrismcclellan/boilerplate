@@ -1,0 +1,20 @@
+{
+
+  "navigation": [
+    {
+      "id": "meetings",
+      "name": "Meetings",
+      "path": "/meetings"
+    },
+    {
+      "id": "account",
+      "name": "Account",
+      "path": "/account"
+    },
+    {
+      "id": "logout",
+      "name": "Log out",
+      "path": "/logout"
+    }
+  ]
+}
