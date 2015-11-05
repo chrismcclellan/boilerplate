@@ -1,3 +1,8 @@
 # test
 
-a [Sails](http://sailsjs.org) application
+Sails.js
+Backbone.js
+Marionette.js
+Require.js
+Handlebars
+Foundaton
